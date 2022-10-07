@@ -1,7 +1,1 @@
-#TechLok
-Jeriah
 
-
-DOnmarkkrkrk
-
-Joshua
