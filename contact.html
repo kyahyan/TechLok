@@ -162,12 +162,12 @@
                   <div class="invalid-feedback">Please enter your full name!</div>
                 </div>
                 <div class="col-12">
-                  <label for="email" class="form-label fs-base">Email address</label>
+                  <label for="email" class="form-label fs-base" >Email address</label>
                   <input type="email" class="form-control form-control-lg" id="email" required>
                   <div class="invalid-feedback">Please provide a valid email address!</div>
                 </div>
                 <div class="col-12">
-                  <label for="phoneFormat" class="form-label fs-base">Phone</label>
+                  <label for="phoneFormat" class="form-label fs-base" id="phone">Phone</label>
                   <input type="tel" class="form-control form-control-lg" id="phoneFormat" data-format='{"numericOnly": true, "delimiters": ["+1 ", " ", " "], "blocks": [0, 3, 3, 2]}' placeholder="+1 ___ ___ __">
                 </div>
                 <div class="col-12">
@@ -182,7 +182,7 @@
                
              
                 <div class="col-12 pt-2 pt-sm-3">
-                  <button type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto" >Submit</button>
+                  <button class="btn btn-lg btn-primary w-100 w-sm-auto" onclick="onSubmitMessage()">Submit</button>
                 </div>
               </form>
             </div>
@@ -345,7 +345,29 @@
     <!-- Main Theme Script -->
     <script src="assets/js/modernizr.js"></script>
     <script src="assets/js/theme.min.js"></script>
+    <script type="text/javascript">
+      function onSubmitMessage(){
 
-   
+        var fullname = document.getElementById("fn");
+        var company_name = document.getElementById("cn");
+        var email = document.getElementById("email");
+        var phone = document.getElementById("phoneFormat");
+        var message = document.getElementById("message");
+     
+
+        if(fullname == null && company_name == null
+        && email == null && phone == null && message == null)
+        {
+          alert("Please complete fields!");
+        }
+        else{
+          
+          alert("Your Message has been Sent!");
+        }
+
+      }
+    </script>
+    
+
   </body>
 </html>
